@@ -60,24 +60,9 @@ localSum = _mm256_fmadd_ps(tmpSum, sigRcpVec, localSum);
 
 ---
 
-## 📂 Repository Structure
-
-```
-/src
- ├── main.cpp              # core Fourier similarity algorithms
- ├── avx_opt.cpp           # AVX2-optimized implementation
- ├── openmp_opt.cpp        # manual load-balanced version
- ├── benchmark.cpp         # test harness and timing
-/report
- ├── report.pdf            # full technical report (LaTeX + IEEE format)
- └── Figure1.png           # performance graph
-```
-
----
-
 ## 🧾 Results Summary
 
-![Speedup Chart](report/Figure1.png)
+![Speedup Chart](Figure1.png)
 
 The AVX2-optimized algorithm consistently outperforms the baseline OpenMP version,
 with the highest gains observed for medium-scale datasets (20k–50k images).
